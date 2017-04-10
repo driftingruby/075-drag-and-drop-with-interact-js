@@ -1,0 +1,13 @@
+<% Food.no_opinion_foods.each do |food| %>
+  <%= content_tag :div, 
+                  food.name, 
+                  class: 'drag-drop', 
+                  data: { draggable: true, url: opinion_on_food_path(food) } %>
+<% end %>
+
+<div id="favorite_foods" class="dropzone">
+  <h1>Favorite Foods</h1>
+  <% Food.favorite_foods.each do |food| %>
+    <%= content_tag :div, food.name, class: 'drag-drop can-drop', data: { draggable: true, url: opinion_on_food_path(food) } %>
+  <% end %>
+</div>

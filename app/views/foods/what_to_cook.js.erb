@@ -1,0 +1,5 @@
+<% if @foods.size > 0 %>
+$('#foods').html('<%= j render @foods %>');
+<% else %>
+$('#foods').html('<li class="list-group-item">Sorry, you may go hungry...</li>');
+<% end %>

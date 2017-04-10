@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'https://rails-assets.org'
 gem 'rails', '~> 5.0.0'
 gem 'sqlite3'
 gem 'puma', '~> 3.0'
@@ -25,3 +25,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap-sass'
 gem 'simple_form'
+gem 'faker'
+gem 'annotate'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-interact'
+end

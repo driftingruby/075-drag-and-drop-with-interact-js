@@ -1,0 +1,21 @@
+<% @ingredients.each do |ingredient| %>
+  <%= content_tag :div, 
+                  ingredient.name, 
+                  class: 'drag-drop', 
+                  data: { 
+                    draggable: true, 
+                    url: what_to_cook_path, 
+                    ingredient: ingredient.id } %>
+<% end %>
+<div id="have_ingredients" class="dropzone">
+  <legend>Ingredients I have</legend>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">You have the ingredients to make</h3>
+  </div>
+  <ul id='foods' class='list-group'>
+    <li class="list-group-item">Sorry, you may go hungry...</li>
+  </ul>
+</div>

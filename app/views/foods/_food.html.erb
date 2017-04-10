@@ -1,0 +1,4 @@
+<li class='list-group-item'>
+  <strong><%= food.name %></strong>
+  <%= content_tag :span, 'and it is one of your favorites' if food.favorite? %>
+</li>
